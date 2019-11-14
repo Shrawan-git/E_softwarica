@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -40,7 +41,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Contacts
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ContactAdapter.ContactsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ContactAdapter.ContactsViewHolder holder, final int position) {
         final Contacts detailclass = contactsList.get(position);
         //To hold data in detailclass
 
@@ -60,6 +61,15 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Contacts
         holder.txgenders.setText(detailclass.getGender());
         holder.txages.setText(detailclass.getAge());
         holder.txaddress.setText(detailclass.getAddress());
+
+        holder.imagedelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contactsList.remove(position);
+                notifyDataSetChanged();
+            }
+        } );
+
     }
 
     @Override
@@ -71,6 +81,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Contacts
     public class ContactsViewHolder extends RecyclerView.ViewHolder {
         CircleImageView imgview;
         TextView txnames, txages, txgenders, txaddress;
+        ImageButton imagedelete;
 
         public ContactsViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -79,6 +90,8 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Contacts
             txages = itemView.findViewById(R.id.age);
             txaddress = itemView.findViewById(R.id.address);
             txgenders = itemView.findViewById(R.id.gender);
+            imagedelete = itemView.findViewById(R.id.imgdelete);
+
 
         }
     }

@@ -68,10 +68,10 @@
             cardView:layout_constraintEnd_toEndOf="parent"
             cardView:layout_constraintHorizontal_bias="0.904"
             cardView:layout_constraintStart_toEndOf="@+id/age"
-            cardView:layout_constraintTop_toBottomOf="@+id/imageButton" />
+            cardView:layout_constraintTop_toBottomOf="@+id/imgdelete" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/imgdelete"
             android:layout_width="66dp"
             android:layout_height="55dp"
             android:scaleType="fitXY"
