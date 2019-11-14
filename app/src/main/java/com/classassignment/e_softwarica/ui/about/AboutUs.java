@@ -17,7 +17,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.classassignment.e_softwarica.R;
 
-public class NotificationsFragment extends Fragment {
+public class AboutUs extends Fragment {
     private WebView webView;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.classassignment.e_softwarica.ui.add.DashboardFragment"
+        android:name="com.classassignment.e_softwarica.ui.add.AddStudent"
         android:label="Add"
         tools:layout="@layout/fragment_add" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.classassignment.e_softwarica.ui.about.NotificationsFragment"
+        android:name="com.classassignment.e_softwarica.ui.about.AboutUs"
         android:label="About us"
         tools:layout="@layout/fragment_about" />
 </navigation>

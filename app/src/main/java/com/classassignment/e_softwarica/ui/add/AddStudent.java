@@ -27,7 +27,7 @@ import com.classassignment.e_softwarica.model.Contacts;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DashboardFragment extends Fragment {
+public class AddStudent extends Fragment {
     EditText tvname, tvage, tvaddress;
     RadioButton rbf, rbm;
     RadioGroup radioGroup;
